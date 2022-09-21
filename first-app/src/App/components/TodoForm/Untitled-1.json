@@ -1,0 +1,114 @@
+{
+    "_id" : ObjectId("61d460da530182e0f46063a1"),
+    "approvers_rule" : "min-1",
+    "approvers_type" : "list",
+    "category" : ObjectId("6157c04a39aa6022ab183893"),
+    "name" : "Promociones Easy CL",
+    "owners" : [ "jpulgarp", "ef1989", "jiespino", "bagalazl" ],
+    "sections" : [
+        {
+            "id" : ObjectId("6132a1c84da06d059c92e7b3"),
+            "title" : "Seleccione tipo de carga de datos",
+            "type" : "buttons-options",
+            "options" : [
+                {
+                    "value" : 0,
+                    "label" : "Cargar manualmente",
+                    "icon" : "el-icon-menu",
+                    "next_section_id" : ObjectId("6132a29e7dad03d362a584e0")
+                },
+                {
+                    "value" : 1,
+                    "label" : "Subir archivo",
+                    "icon" : "el-icon-upload2",
+                    "next_section_id" : ObjectId("61689da5edaef10f66ad65a3")
+                }
+            ],
+            "required" : true
+        },
+        {
+            "id" : ObjectId("61689da5edaef10f66ad65a3"),
+            "title" : "Seleccione tipo de carga de datos",
+            "type" : "upload-file",
+            "required" : true,
+            "validation-old" : {
+                "status" : false,
+                "config" : null
+            },
+            "validation" : {
+                "status" : false,
+                "config" : null
+            },
+            "next_section_id" : null,
+            "operation" : "send",
+            "show_in_detail" : true,
+            "fileTemplate" : {
+                "name" : "cambio-promocion-template.xlsx",
+                "extension" : "xlsx",
+                "columns" : [ "sku", "nombre", "precio oferta" ]
+            }
+        },
+        {
+            "id" : ObjectId("6132a29e7dad03d362a584e0"),
+            "title" : "Ingrese código de artículos a modificar",
+            "type" : "search+button-add",
+            "show_in_detail" : true,
+            "validation-old" : null,
+            "validation" : null,
+            "required" : true,
+            "operation" : "send",
+            "next_section_id" : null,
+            "next_action" : {
+                "operation" : "append",
+                "counter" : true,
+                "counter_label" : "ARTÍCULOS AGREGADOS",
+                "scheme" : [
+                    {
+                        "type" : "placeholder+label",
+                        "text" : "NOMBRE ARTÍCULO",
+                        "id" : "label-product",
+                        "value" : ""
+                    },
+                    {
+                        "type" : "placeholder+label",
+                        "text" : "CÓDIGO SKU ARTICULO",
+                        "id" : "sku-product",
+                        "value" : ""
+                    },
+                    {
+                        "type" : "separator"
+                    },
+                    {
+                        "type" : "horizontal-inputs",
+                        "elements" : [
+                            {
+                                "type" : "input-text",
+                                "placeholder" : "PRECIO ACTUAL",
+                                "value" : "",
+                                "properties" : {
+                                    "min_length" : 3,
+                                    "max_length" : 15,
+                                    "format" : "currency"
+                                }
+                            },
+                            {
+                                "type" : "input-text",
+                                "placeholder" : "PRECIO POMOCIÓN",
+                                "value" : "",
+                                "properties" : {
+                                    "min_length" : 3,
+                                    "max_length" : 15,
+                                    "format" : "currency"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "subtitle" : "Solicitud para realizar el Promociones Easy CL.",
+    "title" : "Promociones Easy CL",
+    "updatedAt" : ISODate("2022-09-06T16:41:53.181-03:00"),
+    "must_be_authorized" : false
+}
