@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Platzi/tree/main/first-app/static/css/main.1d7579bb.css",
+    "main.js": "/React-Platzi/tree/main/first-app/static/js/main.62c58d09.js",
+    "static/media/check.svg": "/React-Platzi/tree/main/first-app/static/media/check.14a301c3a28c49b3cae13528c60128ea.svg",
+    "static/media/trash.svg": "/React-Platzi/tree/main/first-app/static/media/trash.b12cb2794a960a9e500440bce7f1a3ab.svg",
+    "index.html": "/React-Platzi/tree/main/first-app/index.html",
+    "main.1d7579bb.css.map": "/React-Platzi/tree/main/first-app/static/css/main.1d7579bb.css.map",
+    "main.62c58d09.js.map": "/React-Platzi/tree/main/first-app/static/js/main.62c58d09.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d7579bb.css",
+    "static/js/main.62c58d09.js"
+  ]
+}
